@@ -1,0 +1,28 @@
+[project]
+name = "financial-qa-10k-rag"
+version = "0.1.0"
+description = "Financial 10-K RAG System"
+requires-python = ">=3.10"
+dependencies = [
+    # Data Engineering
+    "pandas>=2.0.0",
+    "beautifulsoup4>=4.12.0",
+    "datasketch>=1.6.0",
+    "tiktoken>=0.5.0",
+    "matplotlib>=3.7.0",
+    "tqdm>=4.65.0",
+    "kaggle>=1.6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
